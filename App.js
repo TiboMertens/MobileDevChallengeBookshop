@@ -20,14 +20,16 @@ export default function App() {
         </View>
       </View>
       <View style={styles.bookContainer}>
-        <Text style={styles.bookTitle}>book 1</Text>
+        <Text style={styles.bookTitle}>Book 1</Text>
         <Text style={styles.bookAuthor}>by John Doe</Text>
         <Text style={styles.bookDescription}>
           lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
           ipsum lorem ipsum lorem ipsum lorem ipsum
         </Text>
-        <Text style={styles.ISBN}>ISBN 978-8-2165-1860-1</Text>
-        <Text style={styles.readBtn}>Read</Text>
+        <View style={styles.readISBN}>
+          <Text style={styles.ISBN}>ISBN 978-8-2165-1860-1</Text>
+          <Text style={styles.readBtn}>Read</Text>
+        </View>
       </View>
     </View>
   );
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
   },
   shoppingCartAmount: {
     marginTop: 90,
-    fontSize: 18,
+    fontSize: 16,
   },
   shoppingCart: {
     display: "flex",
@@ -56,8 +58,32 @@ const styles = StyleSheet.create({
     right: 30,
   },
   icon: {
-    width: 35,
-    height: 35,
-    marginTop: 73,
+    width: 30,
+    height: 30,
+    marginTop: 75,
   },
+  bookContainer: {
+    marginLeft: 21,
+    marginTop: 10,
+  },
+  bookTitle: {
+    fontSize: 26,
+    fontWeight: "bold",
+  },
+  bookAuthor: {
+    fontSize: 12,
+    marginTop: -5,
+  },
+  bookDescription: {
+    marginTop: 10,
+  },
+  readISBN: {
+    marginTop: 10,
+    display: "flex",
+    flexDirection: "row",
+  },
+  readBtn: {
+    position: "absolute",
+    right: 40,
+  }
 });
