@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function App() {
   return (
@@ -12,6 +12,10 @@ export default function App() {
           <Text style={styles.h1}>Bookshop</Text>
         </View>
         <View style={styles.shoppingCart}>
+        <Image
+            style={styles.icon}
+            source={require('./assets/shoppingCart.png')}
+          />
           <Text style={styles.shoppingCartAmount}>1</Text>
         </View>
       </View>
@@ -35,4 +39,15 @@ const styles = StyleSheet.create({
     marginTop: 90,
     fontSize: 18,
   },
+  shoppingCart: {
+    display: "flex",
+    flexDirection: "row",
+    position: "absolute",
+    right: 30,
+  },
+  icon: {
+    width: 35,
+    height: 35,
+    marginTop: 73,
+  }
 });
