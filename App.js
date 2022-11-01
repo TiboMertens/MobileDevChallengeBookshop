@@ -12,12 +12,22 @@ export default function App() {
           <Text style={styles.h1}>Bookshop</Text>
         </View>
         <View style={styles.shoppingCart}>
-        <Image
+          <Image
             style={styles.icon}
-            source={require('./assets/shoppingCart.png')}
+            source={require("./assets/shoppingCart.png")}
           />
           <Text style={styles.shoppingCartAmount}>1</Text>
         </View>
+      </View>
+      <View style={styles.bookContainer}>
+        <Text style={styles.bookTitle}>book 1</Text>
+        <Text style={styles.bookAuthor}>by John Doe</Text>
+        <Text style={styles.bookDescription}>
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum lorem ipsum lorem ipsum
+        </Text>
+        <Text style={styles.ISBN}>ISBN 978-8-2165-1860-1</Text>
+        <Text style={styles.readBtn}>Read</Text>
       </View>
     </View>
   );
@@ -49,5 +59,5 @@ const styles = StyleSheet.create({
     width: 35,
     height: 35,
     marginTop: 73,
-  }
+  },
 });
