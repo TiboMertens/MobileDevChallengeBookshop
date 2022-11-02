@@ -1,5 +1,7 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity} from "react-native";
+
+import Book from "./component/book.js";
 
 export default function App() {
   return (
@@ -19,20 +21,10 @@ export default function App() {
           <Text style={styles.shoppingCartAmount}>1</Text>
         </View>
       </View>
-      <View style={styles.bookContainer}>
-        <Text style={styles.bookTitle}>Book 1</Text>
-        <Text style={styles.bookAuthor}>by John Doe</Text>
-        <Text style={styles.bookDescription}>
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum lorem ipsum
-        </Text>
-        <View style={styles.readISBN}>
-          <Text style={styles.ISBN}>ISBN 978-8-2165-1860-1</Text>
-          <Text style={styles.readBtn}>Read</Text>
-        </View>
+      <View>
+        <Book title="Book 1" author="by John Doe" />
       </View>
     </View>
-    //hey
   );
 }
 
@@ -63,28 +55,4 @@ const styles = StyleSheet.create({
     height: 30,
     marginTop: 75,
   },
-  bookContainer: {
-    marginLeft: 21,
-    marginTop: 10,
-  },
-  bookTitle: {
-    fontSize: 26,
-    fontWeight: "bold",
-  },
-  bookAuthor: {
-    fontSize: 12,
-    marginTop: -5,
-  },
-  bookDescription: {
-    marginTop: 10,
-  },
-  readISBN: {
-    marginTop: 10,
-    display: "flex",
-    flexDirection: "row",
-  },
-  readBtn: {
-    position: "absolute",
-    right: 40,
-  }
 });
