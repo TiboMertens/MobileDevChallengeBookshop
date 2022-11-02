@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 
 import Book from "./component/book.js";
@@ -30,14 +31,52 @@ export default function App() {
           <Text style={styles.shoppingCartAmount}>1</Text>
         </View>
       </View>
-      <View>
-        <Book
-          title="Book 1"
-          author="by John Doe"
-          description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
-          ISBN="3146-6565-61-654"
-        />
-      </View>
+      <ScrollView>
+        <View>
+          <Book
+            title="Book 1"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 2"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 3"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 4"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 5"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 6"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+          <Book
+            title="Book 7"
+            author="by John Doe"
+            description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            ISBN="3146-6565-61-654"
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -53,6 +92,7 @@ const styles = StyleSheet.create({
   heading: {
     display: "flex",
     flexDirection: "row",
+    marginBottom: 30,
   },
   shoppingCartAmount: {
     marginTop: 90,
