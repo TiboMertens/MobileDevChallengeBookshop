@@ -13,10 +13,17 @@ function bookRead() {
   console.log("read");
 }
 
+function bookPressed() {
+  console.log("pressed");
+}
+
 const Book = (props) => {
   return (
     <View style={styles.bookContainer}>
-      <Text style={styles.bookTitle}>{props.title}</Text>
+      <TouchableNativeFeedback onPress={() => bookPressed()}>
+        <Text style={styles.bookTitle}>{props.title}</Text>
+      </TouchableNativeFeedback>
+
       <Text style={styles.bookAuthor}>{props.author}</Text>
       <Text style={styles.bookDescription}>{props.description}</Text>
       <View style={styles.readISBN}>
