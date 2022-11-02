@@ -1,23 +1,34 @@
-import { StyleSheet, Text, View, Image, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+} from "react-native";
 
-function bookRead(){
-    console.log("read");
+function bookRead() {
+  console.log("read");
 }
 
 const Book = (props) => {
   return (
-      <View style={styles.bookContainer}>
-        <Text style={styles.bookTitle}>{props.title}</Text>
-        <Text style={styles.bookAuthor}>{props.author}</Text>
-        <Text style={styles.bookDescription}>
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum lorem ipsum
-        </Text>
-        <View style={styles.readISBN}>
-          <Text style={styles.ISBN}>ISBN 978-8-2165-1860-1</Text>
-          <TouchableNativeFeedback onPress={()=>bookRead()} style={styles.readBtnStyle}><Text style={styles.readBtn}>Read</Text></TouchableNativeFeedback>
-        </View>
+    <View style={styles.bookContainer}>
+      <Text style={styles.bookTitle}>{props.title}</Text>
+      <Text style={styles.bookAuthor}>{props.author}</Text>
+      <Text style={styles.bookDescription}>{props.description}</Text>
+      <View style={styles.readISBN}>
+        <Text style={styles.ISBN}>{props.ISBN}</Text>
+        <TouchableNativeFeedback
+          onPress={() => bookRead()}
+          style={styles.readBtnStyle}
+        >
+          <Text style={styles.readBtn}>Read</Text>
+        </TouchableNativeFeedback>
       </View>
+    </View>
   );
 };
 
@@ -40,9 +51,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   readISBN: {
-    marginTop: 10,
+    marginTop: 15,
     display: "flex",
     flexDirection: "row",
+  },
+  ISBN: {
+    marginTop: 5,
   },
   readBtn: {
     position: "absolute",
@@ -56,5 +70,5 @@ const styles = StyleSheet.create({
   },
   readBtnStyle: {
     cursor: "pointer",
-  }
+  },
 });
