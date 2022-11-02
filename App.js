@@ -1,5 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, TouchableHighlight, TouchableWithoutFeedback, TouchableNativeFeedback, TouchableOpacity} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+} from "react-native";
 
 import Book from "./component/book.js";
 
@@ -22,7 +31,12 @@ export default function App() {
         </View>
       </View>
       <View>
-        <Book title="Book 1" author="by John Doe" />
+        <Book
+          title="Book 1"
+          author="by John Doe"
+          description="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+          ISBN="3146-6565-61-654"
+        />
       </View>
     </View>
   );
